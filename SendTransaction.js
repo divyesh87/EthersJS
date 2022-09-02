@@ -2,7 +2,7 @@ const ethers = require('ethers');
 require("dotenv").config()
 
 async function main() {
-    const provider = new ethers.providers.AlchemyProvider("goerli", "kDLMYqyIdr1tmp3HrjnN81iXsDnyQRAO")
+    const provider = new ethers.providers.AlchemyProvider("goerli", process.env.ALCHEMY_API_KEY)
 
 
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider)

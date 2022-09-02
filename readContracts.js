@@ -1,7 +1,7 @@
 const ethers = require('ethers');
 
 async function main() {
-    const provider = await new ethers.providers.AlchemyProvider("homestead", "kDLMYqyIdr1tmp3HrjnN81iXsDnyQRAO")
+    const provider = await new ethers.providers.AlchemyProvider("homestead", "process.env.ALCHEMY_API_KEY")
 
     const ERC_20_ABI = [
         "function name() view returns(string)",
